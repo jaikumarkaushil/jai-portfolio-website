@@ -1,0 +1,6 @@
+frontend_react/node_modules
+portfolio_backend/node_modules
+frontend_react/build
+frontend_react/.env
+
+/assets
