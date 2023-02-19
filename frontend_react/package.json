@@ -1,6 +1,6 @@
 {
-  "name": "jai-portfolio",
-  "version": "0.1.0",
+  "name": "frontend_react",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@sanity/client": "^3.3.2",
@@ -42,27 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaikumarkaushil/jai-portfolio.git"
-  },
-  "keywords": [
-    "#resume",
-    "#full",
-    "stak",
-    "developer",
-    "#personal",
-    "website",
-    "#jaikumarkaushil",
-    "#jai-kumar-kaushil"
-  ],
-  "author": "Jai Kumar Kaushil (jaikumarkaushil@gmail.com)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jaikumarkaushil/jai-portfolio/issues"
-  },
-  "homepage": "https://github.com/jaikumarkaushil/jai-portfolio#readme"
+  }
 }
