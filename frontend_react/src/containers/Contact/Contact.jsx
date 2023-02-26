@@ -96,6 +96,7 @@ const Contact = () => {
               className="p-text"
               placeholder="Your Name"
               value={name}
+              required
               onChange={handleChangeInput}
               name="name"
             />
@@ -105,6 +106,7 @@ const Contact = () => {
               type="email"
               className="p-text"
               placeholder="Your Email"
+              required
               value={email}
               onChange={handleChangeInput}
               name="email"
