@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jaikumarkaushil/personal-portfolio">
-    <img src="images/letter-P-circle.svg" alt="Logo" width="80" height="80">
+    <img src="frontend_react/src/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Portfolio Portfolio</h3>
@@ -34,16 +34,16 @@
   <p align="center">
     A finely crafted portfolio that highlights my expertise and accomplishments. A visually stunning and efficient portfolio, completed with seamless animations, developed using React JS, Sanity, and Framer-motion.
     <br />
-    <a href="https://jai-portfolio.netlify.app" target="_blank" rel="noreferrer"><strong>Portfolio Website</strong></a>
+    <a href="https://jaik-portfolio.netlify.app" target="_blank" rel="noreferrer"><strong>Portfolio Website</strong></a>
     <br />
-    <a href="https://github.com/jaikumarkaushil/jai-portfolio"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jaikumarkaushil/jai-portfolio-website"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://jai-portfolio.netlify.app" target="_blank" rel="noreferrer">View Demo</a>
+    <a href="https://jaik-portfolio.netlify.app" target="_blank" rel="noreferrer">View Demo</a>
     ·
-    <a href="https://github.com/jaikumarkaushil/jai-portfolio/issues">Report Bug</a>
+    <a href="https://github.com/jaikumarkaushil/jai-portfolio-website/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jaikumarkaushil/jai-portfolio/issues">Request Feature</a>
+    <a href="https://github.com/jaikumarkaushil/jai-portfolio-website/issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,9 +77,9 @@
 
 ## About The Project
 
-[![Home Page][product-screenshot-1]](https://jai-portfolio.netlify.app)
-[![Skills Page][product-screenshot-2]](https://jai-portfolio.netlify.app/#skills)
-[![Contact Page][product-screenshot-3]](https://jai-portfolio.netlify.app/#contact)
+[![Home Page][product-screenshot-1]](https://jaik-portfolio.netlify.app)
+[![Skills Page][product-screenshot-2]](https://jaik-portfolio.netlify.app/#skills)
+[![Contact Page][product-screenshot-3]](https://jaik-portfolio.netlify.app/#contact)
 
 Website is completely built using the React JS and Sanity knowledge. No need to be proficient to understand or change the content, basic understanding is enough fill the gaps.
 
@@ -135,14 +135,14 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
 1. After completing the prerequistes, go ahead with the following steps.
 2. Clone the repo
    ```sh
-   git clone https://github.com/jaikumarkaushil/jai-portfolio.git
+   git clone https://github.com/jaikumarkaushil/jai-portfolio-website.git
    ```
 3. Install NPM packages in the folders [Frontend React](/frontend_react).
    > Make sure you are in the right folder path in the terminal.
    ```sh
    npm install
    ```
-4. Replace the [Backend Sanity](/backend_sanity) file contents with your sanity file contents (entire folder).
+4. Replace the [Backend Sanity](/portfolio_backend) file contents with your sanity file contents (entire folder).
 5. Run the command and a page with your sanity documents appears.
    > Make sure you are in the right folder path in the terminal.
    ```
@@ -193,25 +193,25 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Jai Kumar Kaushil - [@jaikumarkaushil](https://instagram.com/jaikumarkaushill) - jaikumarkaushil@gmail.com
+Jai Kumar Kaushil - [@jaikumarkaushil (Instagram) ](https://instagram.com/jaikumarkaushill) - jaikumarkaushil@gmail.com
 
-Project Link: [https://jai-portfolio.netlify.app](https://jai-portfolio.netlify.app)
+Project Link: [https://jaik-portfolio.netlify.app](https://jaik-portfolio.netlify.app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/jaikumarkaushil/jai-portfolio.svg?style=for-the-badge
-[contributors-url]: https://github.com/jaikumarkaushil/jai-portfolio/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jaikumarkaushil/jai-portfolio.svg?style=for-the-badge
-[forks-url]: https://github.com/jaikumarkaushil/jai-portfolio/network/members
-[stars-shield]: https://img.shields.io/github/stars/jaikumarkaushil/jai-portfolio.svg?style=for-the-badge
-[stars-url]: https://github.com/jaikumarkaushil/jai-portfolio/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jaikumarkaushil/jai-portfolio.svg?style=for-the-badge
-[issues-url]: https://github.com/jaikumarkaushil/jai-portfolio/issues
-[license-shield]: https://img.shields.io/github/license/jaikumarkaushil/jai-portfolio.svg?style=for-the-badge
-[license-url]: https://github.com/jaikumarkaushil/jai-portfolio/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/jaikumarkaushil/jai-portfolio-website.svg?style=for-the-badge
+[contributors-url]: https://github.com/jaikumarkaushil/jai-portfolio-website/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jaikumarkaushil/jai-portfolio-website.svg?style=for-the-badge
+[forks-url]: https://github.com/jaikumarkaushil/jai-portfolio-website/network/members
+[stars-shield]: https://img.shields.io/github/stars/jaikumarkaushil/jai-portfolio-website.svg?style=for-the-badge
+[stars-url]: https://github.com/jaikumarkaushil/jai-portfolio-website/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jaikumarkaushil/jai-portfolio-website.svg?style=for-the-badge
+[issues-url]: https://github.com/jaikumarkaushil/jai-portfolio-website/issues
+[license-shield]: https://img.shields.io/github/license/jaikumarkaushil/jai-portfolio-website.svg?style=for-the-badge
+[license-url]: https://github.com/jaikumarkaushil/jai-portfolio-website/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jai-kumar-kaushil
 [product-screenshot-1]: images/home-page.png
