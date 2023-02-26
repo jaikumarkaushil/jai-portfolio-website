@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
+import emailjs from "@emailjs/browser";
 
 import "./Contact.scss";
 
@@ -13,6 +14,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  // const [formError, setFormError] = useState({status: false,message: ""})
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setIsLoading] = useState(false);
 
@@ -26,20 +28,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setIsLoading(true);
 
     const contact = {
       _type: "contact",
-      name: name,
+      from_name: name,
       email: email,
       subject: subject,
       message: message,
     };
+    console.log(process.env);
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        contact,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setIsLoading(false);
+          setIsFormSubmitted(true);
+          console.log(result.text);
+        },
+        (error) => {
+          setIsLoading(false);
+          setIsFormSubmitted(false);
+          console.log(error.message);
+        }
+      );
+
+    delete contact.from_name;
+    contact.name = name;
 
     client.create(contact).then((data) => {
-      setIsLoading(false);
-      setIsFormSubmitted(true);
+      console.log("Successfully created contact in Sanity database.");
     });
   };
 
@@ -64,7 +89,7 @@ const Contact = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__contact-form app__flex">
+        <form onSubmit={handleSubmit} className="app__contact-form app__flex">
           <div className="app__flex">
             <input
               type="text"
@@ -103,14 +128,10 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button
-            type="button"
-            className=" portfolio-button"
-            onClick={handleSubmit}
-          >
+          <button type="submit" className=" portfolio-button">
             {loading ? "Sending Message" : "Send Message"}
           </button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3 className="head-text">
