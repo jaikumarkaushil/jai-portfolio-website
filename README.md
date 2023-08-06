@@ -195,7 +195,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Jai Kumar Kaushil - [@jaikumarkaushil (Instagram) ](https://instagram.com/jaikumarkaushill) - jaikumarkaushil@gmail.com
 
-Project Link: [https://jaik-portfolio.netlify.app](https://jaik-portfolio.netlify.app)
+Project Link: [Link](https://jai-kaushil.tech/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
