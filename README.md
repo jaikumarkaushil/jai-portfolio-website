@@ -34,12 +34,12 @@
   <p align="center">
     A finely crafted portfolio that highlights my expertise and accomplishments. A visually stunning and efficient portfolio, completed with seamless animations, developed using React JS, Sanity, and Framer-motion.
     <br />
-    <a href="https://jaik-portfolio.netlify.app" target="_blank" rel="noreferrer"><strong>Portfolio Website</strong></a>
+    <a href="https://jai-kaushil.tech/" target="_blank"><strong>Portfolio Website</strong></a>
     <br />
     <a href="https://github.com/jaikumarkaushil/jai-portfolio-website"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://jaik-portfolio.netlify.app" target="_blank" rel="noreferrer">View Demo</a>
+    <a href="https://jai-kaushil.tech/" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/jaikumarkaushil/jai-portfolio-website/issues">Report Bug</a>
     ·
