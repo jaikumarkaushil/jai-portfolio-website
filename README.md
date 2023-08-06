@@ -1,7 +1,7 @@
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
+*** That would make this better, please fork the repo and create a pull request
 *** or simply open an issue with the tag "enhancement".
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
@@ -29,7 +29,7 @@
     <img src="frontend_react/src/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Portfolio Portfolio</h3>
+<h3 align="center">Portfolio</h3>
 
   <p align="center">
     A finely crafted portfolio that highlights my expertise and accomplishments. A visually stunning and efficient portfolio, completed with seamless animations, developed using React JS, Sanity, and Framer-motion.
@@ -77,13 +77,13 @@
 
 ## About The Project
 
-[![Home Page][product-screenshot-1]](https://jaik-portfolio.netlify.app)
-[![Skills Page][product-screenshot-2]](https://jaik-portfolio.netlify.app/#skills)
-[![Contact Page][product-screenshot-3]](https://jaik-portfolio.netlify.app/#contact)
+[![Home Page][product-screenshot-1]](https://jai-kaushil.tech)
+[![Skills Page][product-screenshot-2]](https://jai-kaushil.tech/#skills)
+[![Contact Page][product-screenshot-3]](https://jai-kaushil.tech/#contact)
 
-Website is completely built using the React JS and Sanity knowledge. No need to be proficient to understand or change the content, basic understanding is enough fill the gaps.
+The website is completely built using React JS and Sanity knowledge. No need to be proficient to understand or change the content, basic understanding is enough to fill the gaps.
 
-It is completely responsive works fine on most of the devices and highly interactive. Data can be changed using a Content Management Service(CMS), [Sanity](https://www.sanity.io/). Because of this data can be changed anytime even after deployment.
+It is completely responsive works fine on most of the devices and is highly interactive. Data can be changed using a Content Management Service(CMS), [Sanity](https://www.sanity.io/). Because of this data can be changed anytime even after deployment.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -112,7 +112,7 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
   ```sh
   npm install -g @sanity/cli
   ```
-- Login using your preferred way!
+- Log in using your preferred way!
 - Enter the project name, press Y and use the default settings.
 - Now use the command
   ```sh
@@ -132,7 +132,7 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
 
 ### Installation
 
-1. After completing the prerequistes, go ahead with the following steps.
+1. After completing the prerequisites, go ahead with the following steps.
 2. Clone the repo
    ```sh
    git clone https://github.com/jaikumarkaushil/jai-portfolio-website.git
@@ -161,31 +161,6 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
    ```
 9. Your website is up and running. Make the necessary changes and deploy it.
 10. To add or change necessary documents in **Sanity Studio** refer the [Sanity Docs](https://sanity.io/docs), it is very intuitive and easy.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
