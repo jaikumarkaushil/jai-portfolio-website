@@ -1,5 +1,7 @@
 frontend_react/node_modules
+frontend_react/.yarn
 portfolio_backend/node_modules
+portfoloio_backend/.yarn
 frontend_react/build
 frontend_react/.env
 
