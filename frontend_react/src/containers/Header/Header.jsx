@@ -131,4 +131,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(Header, "home", "", "app__flex");
+export default AppWrap(Header, "home", "", "app__flex m-0");
