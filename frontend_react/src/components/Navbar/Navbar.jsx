@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 
 import "./Navbar.scss";
+// import { NavHashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -31,19 +32,42 @@ const Navbar = () => {
     }
   };
 
+  const scrollWithOffset = (link) => {
+    const el = document.getElementById(link);
+    const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+    console.log(yCoordinate);
+    const yOffset = 500;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
+
   return (
-    <nav className={`app__navbar ${classFloat}`}>
+    <nav id="navbar-menu" className={`app__navbar ${classFloat}`}>
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+        <img src={images.logo2} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "work", "skills", "contact"].map((item) => (
+        {[
+          { name: "home", href: "home" },
+          { name: "about", href: "about" },
+          { name: "work", href: "work" },
+          { name: "skills", href: "skills" },
+          { name: "story", href: "experiences-journey" },
+          { name: "contact", href: "contact" },
+        ].map((item) => (
           <li
-            key={`link-${item}`}
-            className={`app__flex p-text ${active === item ? "active" : ""}`}
+            key={`link-${item.name}`}
+            className={`app__flex p-text ${
+              active === item.name ? "active" : ""
+            }`}
           >
-            <a href={`#${item}`} onClick={() => setActive(item)}>
-              {item}
+            <a
+              href={`#${item.href}`}
+              onClick={() => {
+                setActive(item.name);
+                scrollWithOffset(item.href);
+              }}
+            >
+              {item.name}
             </a>
           </li>
         ))}
@@ -58,10 +82,17 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
+              {[
+                { name: "home", href: "home" },
+                { name: "about", href: "about" },
+                { name: "work", href: "work" },
+                { name: "skills", href: "skills" },
+                { name: "story", href: "experiences-journey" },
+                { name: "contact", href: "contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <a href={`#${item.href}`} onClick={() => setToggle(false)}>
+                    {item.name}
                   </a>
                 </li>
               ))}

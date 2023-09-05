@@ -25,6 +25,12 @@ export default {
             validation: (Rule) => Rule.min(1),
         },
         {
+            name: 'logoUrl',
+            title: 'Logo URL',
+            type: 'image',
+
+        },
+        {
             name: 'imgUrl',
             title: 'Image URL',
             type: 'image',

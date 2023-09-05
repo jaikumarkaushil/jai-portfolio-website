@@ -130,7 +130,7 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="submit" className=" portfolio-button">
+          <button type="submit" className="portfolio-button">
             {loading ? "Sending Message" : "Send Message"}
           </button>
         </form>
@@ -146,7 +146,8 @@ const Contact = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Contact, "app__contact"),
+  MotionWrap(Contact, "app__contact app__flex"),
   "contact",
-  "app__whitebg"
+  "app__whitebg",
+  "app__flex"
 );

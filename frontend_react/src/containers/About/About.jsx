@@ -15,7 +15,10 @@ const About = () => {
     const aboutMeQuery = `*[_type == "aboutme"][0]{
       profileImg,
       description,
-      "resumeUrl": resume.asset -> url 
+      "resumeUrl": resume.asset -> url,
+      resume2,
+      question,
+      quesAnswer
     }`;
     client.fetch(aboutsQuery).then((data) => {
       setAbouts(data);
@@ -51,10 +54,10 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="app__about-data app__flex">
-          <h2 className="head-text">About Me</h2>
+        <div className="app__about-data app__flex px-2">
+          <h2 className="head-text">A little story about me</h2>
           <p
-            className="p-text"
+            className="about-desc"
             dangerouslySetInnerHTML={{ __html: aboutMe.description }}
           ></p>
           <div>
@@ -66,31 +69,38 @@ const About = () => {
       </div>
 
       <div className="app__profiles">
-        {abouts.map((about) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1.1 }}
-            transition={{ duration: 0.2, type: "tween" }}
-            className="app__profile-item"
-            key={about.index}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: "20px" }}>
-              {about.title}
-            </h2>
-            <h2 className="p-text" style={{ marginTop: "10px" }}>
-              {about.description}
-            </h2>
-          </motion.div>
-        ))}
+        <div className="row">
+          {abouts.map((about) => (
+            <div className="col-md-6 col-xl-3 col-xs-12 mb-5" key={about.index}>
+              <motion.div
+                whileInView={{ opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 1.1 }}
+                transition={{ duration: 0.2, type: "tween" }}
+                className="app__profile-item"
+                key={about.index}
+              >
+                <img src={urlFor(about.imgUrl)} alt={about.title} />
+                <div className="about-box">
+                  <h2 className="bold-text" style={{ marginTop: "20px" }}>
+                    {about.title}
+                  </h2>
+                  <h2 className="p-text" style={{ marginTop: "10px" }}>
+                    {about.description}
+                  </h2>
+                </div>
+              </motion.div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(About, "app__about"),
+  MotionWrap(About, "app__about app__flex"),
   "about",
-  "app__whitebg"
+  "app__whitebg",
+  "app__flex"
 );

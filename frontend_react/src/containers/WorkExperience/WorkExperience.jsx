@@ -96,7 +96,8 @@ const WorkExperience = () => {
 };
 
 export default AppWrap(
-  MotionWrap(WorkExperience, "app__workExperience"),
+  MotionWrap(WorkExperience, "app__workExperience app__flex"),
   "workExperience",
-  "app__primarybg"
+  "app__primarybg",
+  "app__flex"
 );

@@ -4,6 +4,24 @@
   width: 100%;
 }
 
+.about-desc {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--gray-color);
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 1.5rem;
+  }
+}
+
 .app__about-context {
   width: 100%;
   // height: fit-content;
@@ -55,7 +73,6 @@
 
 .app__about-data {
   width: 100%;
-  margin: 2rem;
   flex-direction: column;
   justify-content: flex-start !important;
   align-items: flex-start !important;
@@ -93,18 +110,25 @@
 }
 
 .app__profile-item {
-  width: 190px;
+  width: 95%;
+  margin:auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.1);
 
   img {
     width: 100%;
     height: 170px;
     object-fit: cover;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .about-box  {
+    padding: 1rem;
   }
 
   @media screen and (min-width: 2000px) {

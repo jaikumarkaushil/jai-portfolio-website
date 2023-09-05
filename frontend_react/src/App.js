@@ -8,6 +8,7 @@ import {
   // Testimonial,
   // WorkExperience,
   Work,
+  ExperienceTimeline
 } from "./containers";
 
 import { Navbar, Footer } from "./components";
@@ -21,6 +22,7 @@ const App = () => {
       <About />
       <Work />
       <Skills />
+      <ExperienceTimeline />
       {/* <Testimonial />
       <WorkExperience /> */}
       <Contact />

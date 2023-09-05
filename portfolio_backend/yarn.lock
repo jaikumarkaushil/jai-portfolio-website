@@ -5791,23 +5791,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jai-portfolio@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "jai-portfolio@workspace:."
-  dependencies:
-    "@sanity/eslint-config-studio": ^2.0.1
-    "@sanity/vision": ^3.0.0
-    eslint: ^8.6.0
-    prettier: ^2.8.4
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-is: ^18.2.0
-    sanity: ^3.0.0
-    styled-components: ^5.2.0
-    typescript: ^4.0.0
-  languageName: unknown
-  linkType: soft
-
 "js-sdsl@npm:^4.1.4":
   version: 4.3.0
   resolution: "js-sdsl@npm:4.3.0"
@@ -6968,6 +6951,23 @@ __metadata:
   checksum: 9fe7d03b4ec0e85bfb9dadc23b745147bfe42e16f466ba06e6327197d0e38b72015afc2f918a8051dedc3680310417f346ffdc463be6518e2e92e98f48e30268
   languageName: node
   linkType: hard
+
+"portfolio_backend@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "portfolio_backend@workspace:."
+  dependencies:
+    "@sanity/eslint-config-studio": ^2.0.1
+    "@sanity/vision": ^3.0.0
+    eslint: ^8.6.0
+    prettier: ^2.8.4
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-is: ^18.2.0
+    sanity: ^3.0.0
+    styled-components: ^5.2.0
+    typescript: ^4.0.0
+  languageName: unknown
+  linkType: soft
 
 "postcss-value-parser@npm:^4.0.2":
   version: 4.2.0

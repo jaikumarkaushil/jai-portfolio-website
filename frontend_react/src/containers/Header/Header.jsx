@@ -52,7 +52,7 @@ const Header = () => {
       "FERN STACK",
     ],
     typeSpeed: 100,
-    loop: false,
+    loop: true,
   });
 
   return (
@@ -64,9 +64,8 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+            <div>
+              <p className="bold-text">👋 Hello, I am</p>
               <p className="head-text">Jai</p>
             </div>
           </div>
@@ -74,6 +73,12 @@ const Header = () => {
             <p className="p-text">{tagText}</p>
             <Cursor cursorStyle="|" />
             {/* <p className="p-text">Enthusiast</p> */}
+          </div>
+        </div>
+        <div className="badge-cpm2 app__flex mt-5">
+          <div className="bold-text">
+            Solution-driven intermediate developer striding on an unending
+            journey of linear growth 🚀
           </div>
         </div>
       </motion.div>
@@ -84,7 +89,7 @@ const Header = () => {
         className="app__header-img"
       >
         <motion.img
-          src={images.programmer}
+          src={images.profile}
           alt="profile_bg"
           whileInView={{ y: [-100, 0] }}
         />
@@ -126,4 +131,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(Header, "home");
+export default AppWrap(Header, "home", "", "app__flex");

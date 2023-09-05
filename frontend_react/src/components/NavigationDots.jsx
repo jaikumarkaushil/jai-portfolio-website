@@ -8,6 +8,7 @@ const NavigationDots = ({ active }) => {
         "about",
         "work",
         "skills",
+        "experiences-journey",
         // "testimonials",
         // "workExperiences",
         "contact",

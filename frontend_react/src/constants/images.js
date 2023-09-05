@@ -32,11 +32,12 @@ import aboutpea from "../assets/aboutIMG-pea.png";
 
 import profile from "../assets/profile.png";
 import programmer from "../assets/programmer.svg";
+import programmerGIF from "../assets/programmer-gif.gif";
 
 import testimonialBg from "../assets/testimonialBg.png";
 import circle from "../assets/circle.svg";
 import logo from "../assets/logo.png";
-
+import logo2 from "../assets/logo2.png";
 import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
 import asus from "../assets/asus.png";
@@ -77,9 +78,11 @@ const images = {
   aboutpea,
   profile,
   programmer,
+  programmerGIF,
   testimonialBg,
   circle,
   logo,
+  logo2,
   adidas,
   amazon,
   asus,

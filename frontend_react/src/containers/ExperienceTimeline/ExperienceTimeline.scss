@@ -35,10 +35,6 @@
   width: 80% !important;
 }
 
-.skills-height-fix {
-  min-height: auto !important;
-}
-
 .app__skills-item {
   flex-direction: column;
   text-align: center;
@@ -160,9 +156,25 @@
 //timeline of work experiences
 
 // overriding react-vertical-timeline classes
+
+.vertical-timeline-element {
+  @media screen and (max-width: 1170px) {
+      margin-left: -17px !important;
+  }
+}
+
+ .vertical-timeline.vertical-timeline--two-columns {
+  width: 100% !important;
+ }
 .vertical-timeline-element-content {
   -webkit-box-shadow: 0 0 0 0 !important;
   box-shadow: 0 0 0 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  // margin: 0 !important;
+  @media screen and (max-width: 1170px) {
+      margin-left: 90px !important;
+    }
 }
 
 .vertical-timeline-element-icon {
@@ -201,5 +213,21 @@
       width: 45px;
       height: 45px;
     }
+  }
+}
+
+.experiencesTimelin-tooltip {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+  padding: 1rem !important;
+  color: var(--gray-color) !important;
+  // text-align: center !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem !important;
+    max-width: 500px !important;
+    line-height: 2 !important;
   }
 }

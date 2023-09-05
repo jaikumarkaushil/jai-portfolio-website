@@ -54,7 +54,6 @@
     width: 340px;
     flex-direction: column;
     margin: 2rem;
-    padding: 1rem;
 
     border-radius: 0.5rem;
     background-color: #fff;
@@ -146,6 +145,7 @@
   flex-direction: column;
   width: 100%;
   position: relative;
+  padding: 1rem;
 
   h4 {
     margin-top: 1rem;
