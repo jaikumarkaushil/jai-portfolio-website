@@ -77,8 +77,8 @@ const Header = () => {
         </div>
         <div className="badge-cpm2 app__flex mt-5">
           <div className="bold-text">
-            Solution-driven intermediate developer striding on an unending
-            journey of linear growth 🚀
+            Solution-driven developer striding on an unending journey of
+            exponential growth 🚀
           </div>
         </div>
       </motion.div>
