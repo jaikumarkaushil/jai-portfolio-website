@@ -25,8 +25,8 @@ function SkillsCarousel(props) {
       {
         breakpoint: 767.9,
         settings: {
-          dots: false,
-          arrows: false,
+          dots: true,
+          arrows: true,
           infinite: true,
           autoplay: true,
           autoplaySpeed: 3000,
@@ -38,8 +38,8 @@ function SkillsCarousel(props) {
       {
         breakpoint: 991.9,
         settings: {
-          dots: false,
-          arrows: false,
+          dots: true,
+          arrows: true,
           infinite: true,
           autoplay: true,
           autoplaySpeed: 3000,

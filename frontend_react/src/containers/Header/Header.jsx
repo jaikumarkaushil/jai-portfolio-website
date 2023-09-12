@@ -60,25 +60,37 @@ const Header = () => {
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className="app__header-info"
+        className="app__header-badge d-inline-flex d-md-none"
+      >
+        <div className="badge-cmp app__flex">
+          <div>
+            <p className="bold-text">👋 Hello, I am</p>
+            <p className="head-text">Jai</p>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="app__header-info order-2 order-md-1"
       >
         <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
+          <div className="badge-cmp app__flex d-none d-md-inline-flex">
             <div>
               <p className="bold-text">👋 Hello, I am</p>
               <p className="head-text">Jai</p>
             </div>
           </div>
-          <div className="tag-cmp app__flex">
+          <div className="tag-cmp app__flex my-3">
             <p className="p-text">{tagText}</p>
             <Cursor cursorStyle="|" />
             {/* <p className="p-text">Enthusiast</p> */}
           </div>
         </div>
-        <div className="badge-cpm2 app__flex mt-5">
-          <div className="bold-text">
+        <div className="badge-cpm2 app__flex mb-4 mb-md-0">
+          <div className="bold-text text-center">
             Solution-driven developer striding on an unending journey of
-            exponential growth 🚀
+            <span className="secondary-color"> exponential growth </span>🚀
           </div>
         </div>
       </motion.div>
@@ -86,7 +98,7 @@ const Header = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
+        className="app__header-img order-1 order-md-2"
       >
         <motion.img
           src={images.profile}
@@ -104,7 +116,7 @@ const Header = () => {
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
+        className="app__header-circles d-none d-md-flex order-3"
       >
         {[
           images.javascript,

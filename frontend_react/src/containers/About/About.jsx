@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import parse from "html-react-parser";
 
 import { images } from "../../constants";
 import { client, urlFor } from "../../client";
@@ -9,7 +10,6 @@ import "./About.scss";
 const About = () => {
   const [abouts, setAbouts] = useState([]);
   const [aboutMe, setAboutMe] = useState({});
-
   useEffect(() => {
     const aboutsQuery = '*[_type == "abouts"] | order(index)';
     const aboutMeQuery = `*[_type == "aboutme"][0]{
@@ -55,11 +55,10 @@ const About = () => {
           </div>
         </div>
         <div className="app__about-data app__flex px-2">
-          <h2 className="head-text mt-2 mt-lg-0">A little story about me</h2>
-          <p
-            className="about-desc"
-            dangerouslySetInnerHTML={{ __html: aboutMe.description }}
-          ></p>
+          <h2 className="head-text mt-4 mt-lg-0">A little story about me</h2>
+          <p className="about-desc">
+            {aboutMe.description && parse(aboutMe.description)}
+          </p>
           <div>
             <button className="portfolio-button" onClick={viewResumeHandler}>
               Resume

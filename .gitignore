@@ -4,5 +4,6 @@ portfolio_backend/node_modules
 portfoloio_backend/.yarn
 frontend_react/build
 frontend_react/.env
+frontend_react/package-lock.json
 
 /assets

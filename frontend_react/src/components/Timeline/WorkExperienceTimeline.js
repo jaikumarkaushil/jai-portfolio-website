@@ -4,6 +4,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import { motion } from "framer-motion";
 import { urlFor } from "../../client";
 
+import parse from "html-react-parser";
+
 function WorkExperienceTimeline(props) {
   const skillVariants = {
     view: {
@@ -73,7 +75,7 @@ function WorkExperienceTimeline(props) {
             data-for={exp.name}
           >
             <h4 className="bold-text vertical-timeline-element-title">{exp.name}</h4>
-            <p className="p-text vertical-timeline-element-subtitle">{exp.company}</p>
+            <p className="p-text vertical-timeline-element-subtitle ">{exp.company}</p>
           </motion.div>
           {exp?.works?.map((work) => (
             <React.Fragment key={work.order} >
@@ -93,9 +95,9 @@ function WorkExperienceTimeline(props) {
                 {work.company && work.company !== "" && <p className="p-text vertical-timeline-element-subtitle">{work.company}</p>}
                 <div
                   id={work.name}
-                  className="skills-tooltip mt-3"
+                  className="skills-tooltip p-text mt-3"
                 >
-                  {work.desc}
+                  {parse(work.desc)}
                 </div>
               </motion.div>
 
