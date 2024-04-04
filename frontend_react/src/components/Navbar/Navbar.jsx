@@ -32,7 +32,6 @@ const Navbar = () => {
 
     if (lastHash.current && document.getElementById(lastHash.current)) {
       setTimeout(() => {
-        console.log(lastHash.current);
         const el = document.getElementById(lastHash.current);
         const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
         const yOffset = -80;
@@ -81,11 +80,10 @@ const Navbar = () => {
             }`}
           >
             <a
-              className="app__navbar-link"
               href={`#${item.href}`}
-              onClick={(e) => {
+              className="app__navbar-link"
+              onClick={() => {
                 setActive(item.name);
-                // scrollWithOffset(item.href, e);
               }}
             >
               {item.name}
@@ -118,9 +116,7 @@ const Navbar = () => {
                   <a
                     href={`#${item.href}`}
                     className="app__navbar-link"
-                    onClick={() => {
-                      setToggle(false);
-                    }}
+                    onClick={() => setToggle(false)}
                   >
                     {item.name}
                   </a>

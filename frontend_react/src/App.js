@@ -20,7 +20,6 @@ const App = () => {
     <>
       <BrowserRouter >
         <Navbar />
-
       </BrowserRouter>
       <div className="app">
         <Header />
@@ -31,10 +30,9 @@ const App = () => {
         {/* <Testimonial />
       <WorkExperience /> */}
         <Contact />
+        <Footer />
       </div>
-      <Footer />
     </>
-
   );
 };
 
