@@ -4,6 +4,7 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import { images } from "../../constants";
+import { client } from "../../client";
 
 import "./Navbar.scss";
 // import { NavHashLink } from 'react-router-hash-link';
@@ -12,10 +13,16 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [classFloat, setClassFloat] = useState("");
   const [active, setActive] = useState("");
+  const [resume, setResume] = useState("");
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavBar);
-
+    const aboutMeQuery = `*[_type == "aboutme"][0]{
+      "resumeUrl": resume.asset -> url
+    }`;
+    client.fetch(aboutMeQuery).then((data) => {
+      setResume(data);
+    });
     return () => {
       window.removeEventListener("scroll", stickNavBar);
     };
@@ -24,7 +31,7 @@ const Navbar = () => {
   const stickNavBar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      if (windowHeight > 250) {
+      if (windowHeight > 50) {
         setClassFloat("navbar-float");
       } else {
         setClassFloat("");
@@ -32,11 +39,14 @@ const Navbar = () => {
     }
   };
 
+  const viewResumeHandler = () => {
+    window.open(resume.resumeUrl, "_blank");
+  };
+
   const scrollWithOffset = (link) => {
     const el = document.getElementById(link);
     const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-    console.log(yCoordinate);
-    const yOffset = 500;
+    const yOffset = -80;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
@@ -60,18 +70,21 @@ const Navbar = () => {
               active === item.name ? "active" : ""
             }`}
           >
-            <a
-              href={`#${item.href}`}
+            <div
+              className="app__navbar-link"
               onClick={() => {
                 setActive(item.name);
                 scrollWithOffset(item.href);
               }}
             >
               {item.name}
-            </a>
+            </div>
           </li>
         ))}
       </ul>
+      <button className="navbar-button" onClick={viewResumeHandler}>
+        Resume
+      </button>
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -91,9 +104,15 @@ const Navbar = () => {
                 { name: "contact", href: "contact" },
               ].map((item) => (
                 <li key={item.name}>
-                  <a href={`#${item.href}`} onClick={() => setToggle(false)}>
+                  <span
+                    className="app__navbar-link"
+                    onClick={() => {
+                      setToggle(false);
+                      scrollWithOffset(item.href);
+                    }}
+                  >
                     {item.name}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>

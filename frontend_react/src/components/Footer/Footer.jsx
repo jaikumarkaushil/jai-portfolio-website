@@ -44,6 +44,8 @@ const Footer = () => {
     },
   };
 
+  const year = new Date().getFullYear();
+
   return (
     <div className="app__flex app__footer">
       <motion.div
@@ -104,7 +106,7 @@ const Footer = () => {
           variants={childCopyVariant}
           whileInView="view"
         >
-          &copy; 2023 Jai Kumar Kaushil
+          &copy; {year} Jai Kumar Kaushil
         </motion.p>
         <motion.p
           className="p-text"

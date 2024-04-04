@@ -3,7 +3,7 @@
   justify-content: space-between !important;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #2f2e41;
+  background-color: var(--tertiary-color);
 
   @media screen and (max-width: 500px) {
     flex-direction: column;
@@ -38,7 +38,7 @@
       background-color: var(--white-color);
 
       svg {
-        color: #2f2e41;
+        color: var(--tertiary-color);
       }
     }
   }
@@ -79,6 +79,7 @@
     text-align: center;
     text-transform: uppercase;
     margin: 0.25rem 0;
+    color: var(--primary-color);
   }
 
   @media screen and (max-width: 500px) {

@@ -16,18 +16,21 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div className="app">
+    <>
       <Navbar />
-      <Header />
-      <About />
-      <Work />
-      <Skills />
-      <ExperienceTimeline />
-      {/* <Testimonial />
+      <div className="app">
+        <Header />
+        <About />
+        <Work />
+        <Skills />
+        <ExperienceTimeline />
+        {/* <Testimonial />
       <WorkExperience /> */}
-      <Contact />
-      <Footer />
-    </div>
+        <Contact />
+        <Footer />
+      </div>
+    </>
+
   );
 };
 

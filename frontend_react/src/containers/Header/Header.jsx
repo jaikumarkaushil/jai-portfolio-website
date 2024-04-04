@@ -122,7 +122,8 @@ const Header = () => {
           images.javascript,
           images.react,
           images.node,
-          images.mongodb,
+          images.springBoot,
+          images.mysql,
           images.firebase,
         ].map((circle, index) => (
           <motion.div
@@ -130,7 +131,7 @@ const Header = () => {
             whileInView="visible"
             whileHover="hover"
             drag
-            dragConstraints={{ left: 10, right: 10, top: 10, bottom: 10 }}
+            dragConstraints={{ left: 15, right: 15, top: 15, bottom: 15 }}
             dragElastic={0.1}
             className="circle-cmp app__flex"
             key={`circle-${index}`}
