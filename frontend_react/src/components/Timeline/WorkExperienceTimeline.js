@@ -56,7 +56,7 @@ function WorkExperienceTimeline(props) {
               key={exp.name + "-" + index}
             >
               <div
-                className="app__flex app"
+                className="app__flex"
               >
                 <img style={{ objectFit: "contain" }} src={urlFor(exp.logoUrl)} alt={exp.name} />
               </div>

@@ -77,8 +77,8 @@ const Contact = () => {
       <div className="app__contact-cards">
         <div className="app__contact-card">
           <img src={images.email} alt="email" />
-          <a href="mailto:jaikumarkaushil@gmail.com" className="p-text">
-            jaikumarkaushil@gmail.com
+          <a href="mailto:jaikaushil47@gmail.com" className="p-text">
+            jaikaushil47@gmail.com
           </a>
         </div>
         <div className="app__contact-card">
