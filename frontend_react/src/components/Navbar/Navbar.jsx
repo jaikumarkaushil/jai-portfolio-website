@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
@@ -14,6 +15,8 @@ const Navbar = () => {
   const [classFloat, setClassFloat] = useState("");
   const [active, setActive] = useState("");
   const [resume, setResume] = useState("");
+  const location = useLocation();
+  const lastHash = useRef("");
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavBar);
@@ -23,10 +26,24 @@ const Navbar = () => {
     client.fetch(aboutMeQuery).then((data) => {
       setResume(data);
     });
+    if (location.hash) {
+      lastHash.current = location.hash.slice(1); // safe hash for further use after navigation
+    }
+
+    if (lastHash.current && document.getElementById(lastHash.current)) {
+      setTimeout(() => {
+        console.log(lastHash.current);
+        const el = document.getElementById(lastHash.current);
+        const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+        const yOffset = -80;
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+        lastHash.current = "";
+      }, 100);
+    }
     return () => {
       window.removeEventListener("scroll", stickNavBar);
     };
-  }, []);
+  }, [location]);
 
   const stickNavBar = () => {
     if (window !== undefined) {
@@ -41,13 +58,6 @@ const Navbar = () => {
 
   const viewResumeHandler = () => {
     window.open(resume.resumeUrl, "_blank");
-  };
-
-  const scrollWithOffset = (link) => {
-    const el = document.getElementById(link);
-    const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-    const yOffset = -80;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 
   return (
@@ -70,15 +80,16 @@ const Navbar = () => {
               active === item.name ? "active" : ""
             }`}
           >
-            <div
+            <a
               className="app__navbar-link"
-              onClick={() => {
+              href={`#${item.href}`}
+              onClick={(e) => {
                 setActive(item.name);
-                scrollWithOffset(item.href);
+                // scrollWithOffset(item.href, e);
               }}
             >
               {item.name}
-            </div>
+            </a>
           </li>
         ))}
       </ul>
@@ -104,15 +115,15 @@ const Navbar = () => {
                 { name: "contact", href: "contact" },
               ].map((item) => (
                 <li key={item.name}>
-                  <span
+                  <a
+                    href={`#${item.href}`}
                     className="app__navbar-link"
                     onClick={() => {
                       setToggle(false);
-                      scrollWithOffset(item.href);
                     }}
                   >
                     {item.name}
-                  </span>
+                  </a>
                 </li>
               ))}
             </ul>

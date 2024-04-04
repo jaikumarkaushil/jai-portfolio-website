@@ -12,12 +12,16 @@ import {
 } from "./containers";
 
 import { Navbar, Footer } from "./components";
+import { BrowserRouter } from "react-router-dom";
 import "./App.scss";
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      <BrowserRouter >
+        <Navbar />
+
+      </BrowserRouter>
       <div className="app">
         <Header />
         <About />
@@ -27,8 +31,8 @@ const App = () => {
         {/* <Testimonial />
       <WorkExperience /> */}
         <Contact />
-        <Footer />
       </div>
+      <Footer />
     </>
 
   );
